@@ -14,7 +14,7 @@ Tip: use very structured indentation in HTML too, at least with all block tags "
 
 3. Be extra careful with indentation when mixing PHP and HTML.
 Example:
-    <select name="room-type" id="room-type" disabled>
+`    <select name="room-type" id="room-type" disabled>
         <?php
         foreach ($rooms as $key => $room) { ?>
             <option value="<?= $room['id']; ?>" <?= ($room['id'] == $selectedRoomId) ? 'selected' : ''; ?>><?= $room['comfort_level']; ?></option>
@@ -22,7 +22,7 @@ Example:
 
         } ?>
     </select>
-
+`
 Should be (note matching indentation of opening and closing elements + use of whitespace)
     <select name="room-type" id="room-type" disabled>
         <?php
