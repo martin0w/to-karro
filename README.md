@@ -7,10 +7,10 @@ Coding standards &amp; general advice
 
 * Code formatting - generally OK.
 * Line breaks and empty lines  
-Tip: use empty lines more generously, especially when mixing PHP and HTML
+*Tip: use empty lines more generously, especially when mixing PHP and HTML*
 
 * Indentation: Your indentation in PHP and JS is good.  
-Tip: use very structured indentation in HTML too, at least with all block tags "down to the <p>-level".
+*Tip: use very structured indentation in HTML too, at least with all block tags "down to the <p>-level".*
 
 * Be extra careful with indentation when mixing PHP and HTML.
 Example:
@@ -44,8 +44,8 @@ Should be (note matching indentation of opening and closing elements + use of wh
 
 ## Comments
 
-* Comment density - Generally OK. 
-   Tip: make it to a habit to comment every 5 lines of PHP/JS code.
+* Comment density - Generally OK.   
+   *Tip: make it to a habit to comment every 5 lines of PHP/JS code.*
 
 * At the beginning of each PHP and JS file, place a comment describing clearly the purpose of the file.
 
@@ -62,9 +62,8 @@ Example:
 ```
 
 * Before each function, place a larger comment describing clearly what the function does, 
-  the meaning of each input parameter and what the funciton returns. 
-
-Tip: You can use formalized PHP multi-line comments and PHPDOC notation
+  the meaning of each input parameter and what the funciton returns.  
+*Tip: You can use formalized PHP multi-line comments and PHPDOC notation*
 ```
 /**
  * This is a
@@ -122,9 +121,9 @@ Use:
         </section>
 ```
 
-* Group your functions into logically named files and/or namespaces and/or classes.
-  Tip: The structure and naming of files should allow the reader to get initial understanding
-  of what your application does.
+* Group your functions into logically named files and/or namespaces and/or classes.  
+  *Tip: The structure and naming of files should allow the reader to get initial understanding
+  of what your application does.*
   
   Your overall structure of code should be:
 ```
@@ -135,7 +134,7 @@ Use:
   				<lits of functions. for each function, a header comment describing what the funciton does>
   					<commented code for each function>
 ```
-Tip: Outline your file and class/function structure at a piece of paper before beginning. This will set you on the right direction wrt how to structure your solution top-down.
+*Tip: Outline your file and class/function structure at a piece of paper before beginning. This will set you on the right direction wrt how to structure your solution top-down.*
 
 * Be consistent and balanced in how you mix PHP and HTML. In a function, you could use either echo statements or HTML blocks to output your HTML, but there can be very many `echo()` statements. In HTML, you can use `<?php ?>` tags to inject PHP, but there should not be too many such tags. PHP allows you to do pretty much everything so you need to have discipline to maintain readability of code.
 
@@ -187,4 +186,4 @@ Programming safely
   		...
   		unset ($_SESSION['one']);
 
-  Tip: develop it as a habit. Whenever you declare or start uding a variable, think for a second: "How is this variable going to end?". For example, if this is a local variable within a function, it's going to die when the function ends - no further action necessary. But if you assign a value to a $global, you might explicitly want to restore that $global to its previous state to avoid interfering with any other functions.
+  *Tip: develop it as a habit. Whenever you declare or start uding a variable, think for a second: "How is this variable going to end?". For example, if this is a local variable within a function, it's going to die when the function ends - no further action necessary. But if you assign a value to a $global, you might explicitly want to restore that $global to its previous state to avoid interfering with any other functions.*
