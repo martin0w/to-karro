@@ -1,22 +1,20 @@
-# to-karro
+
+# Karro kodningstips
 Coding standards &amp; general advice
 
-Karro kodningstips
 
+## Code formatting
 
-Code formatting
-===
-
-1. Code formatting - generally OK.
-2. Line breaks and empty lines
-
+### Code formatting - generally OK.
+### Line breaks and empty lines
 Tip: use emty lines more generously, especially when mixing PHP and HTML
 
-3. Indentation: Your indentation in PHP and JS is good.
+### Indentation: Your indentation in PHP and JS is good.
 Tip: use very structured indentation in HTML too, at least with all block tags "down to the <p>-level".
 
-3. Be extra careful with indentation when mixing PHP and HTML.
+### Be extra careful with indentation when mixing PHP and HTML.
 Example:
+```
     <select name="room-type" id="room-type" disabled>
         <?php
         foreach ($rooms as $key => $room) { ?>
@@ -25,8 +23,9 @@ Example:
 
         } ?>
     </select>
-
+```
 Should be (note matching indentation of opening and closing elements + use of whitespace)
+```
     <select name="room-type" id="room-type" disabled>
         <?php
 
@@ -39,22 +38,19 @@ Should be (note matching indentation of opening and closing elements + use of wh
         	<?php
 
         } 
-
         ?>
     </select>
+```
 
+## Comments
 
-
-Comments
-===
-
-* Comment density - Generally OK. 
+### Comment density - Generally OK. 
    Tip: make it to a habit to comment every 5 lines of PHP/JS code.
 
-* At the beginning of each PHP and JS file, place a comment describing clearly the purpose of the file.
+### At the beginning of each PHP and JS file, place a comment describing clearly the purpose of the file.
 
 Example:
-
+```
 <?php
 
 /**
@@ -63,21 +59,22 @@ Example:
  */
 
  ...
+```
 
-
-* Before each function, place a larger comment describing clearly what the function does, 
+### Before each function, place a larger comment describing clearly what the function does, 
   the meaning of each input parameter and what the funciton returns. 
 
-3. Tip: You can use formalized PHP multi-line comments and PHPDOC notation
-
+### Tip: You can use formalized PHP multi-line comments and PHPDOC notation
+```
 /**
  * This is a
  * multi-line
  * comment
  */
+```
 
 Example: 
-
+```
     /**
      * Display a post reaction button (like "clap"), complete with an JS & AJAX handler.
      * Supports multiple clicks to raise the value, plus delayed Ajax save.
@@ -90,10 +87,10 @@ Example:
     function post_reaction_button ( $args, $btn_label ) {
     	...
     }
+```
 
 
-Structure
-===
+## Structure
 
 * Break down *whatever code you can* into reusable functions. For example:
 
