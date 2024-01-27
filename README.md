@@ -7,9 +7,11 @@ Coding standards &amp; general advice
 
 * Code formatting - generally OK.
 * Line breaks and empty lines
-Tip: use emty lines more generously, especially when mixing PHP and HTML
+
+Tip: use empty lines more generously, especially when mixing PHP and HTML
 
 * Indentation: Your indentation in PHP and JS is good.
+
 Tip: use very structured indentation in HTML too, at least with all block tags "down to the <p>-level".
 
 * Be extra careful with indentation when mixing PHP and HTML.
