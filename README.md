@@ -5,14 +5,14 @@ Coding standards &amp; general advice
 
 ## Code formatting
 
-### Code formatting - generally OK.
-### Line breaks and empty lines
+* Code formatting - generally OK.
+* Line breaks and empty lines
 Tip: use emty lines more generously, especially when mixing PHP and HTML
 
-### Indentation: Your indentation in PHP and JS is good.
+* Indentation: Your indentation in PHP and JS is good.
 Tip: use very structured indentation in HTML too, at least with all block tags "down to the <p>-level".
 
-### Be extra careful with indentation when mixing PHP and HTML.
+* Be extra careful with indentation when mixing PHP and HTML.
 Example:
 ```
     <select name="room-type" id="room-type" disabled>
@@ -44,10 +44,10 @@ Should be (note matching indentation of opening and closing elements + use of wh
 
 ## Comments
 
-### Comment density - Generally OK. 
+* Comment density - Generally OK. 
    Tip: make it to a habit to comment every 5 lines of PHP/JS code.
 
-### At the beginning of each PHP and JS file, place a comment describing clearly the purpose of the file.
+* At the beginning of each PHP and JS file, place a comment describing clearly the purpose of the file.
 
 Example:
 ```
@@ -61,10 +61,10 @@ Example:
  ...
 ```
 
-### Before each function, place a larger comment describing clearly what the function does, 
+* Before each function, place a larger comment describing clearly what the function does, 
   the meaning of each input parameter and what the funciton returns. 
 
-### Tip: You can use formalized PHP multi-line comments and PHPDOC notation
+Tip: You can use formalized PHP multi-line comments and PHPDOC notation
 ```
 /**
  * This is a
@@ -95,7 +95,7 @@ Example:
 * Break down *whatever code you can* into reusable functions. For example:
 
 Instead of:
-
+```
         <section class="rooms">
             <?php
             foreach ($rooms as $key => $room) {
@@ -109,9 +109,10 @@ Instead of:
             <?php
             } ?>
         </section>
+```
 
 Use:
-
+```
         <section class="rooms">
             <?php
 
@@ -119,23 +120,24 @@ Use:
 
 			?>
         </section>
+```
 
 * Group your functions into logically named files and/or namespaces and/or classes.
   Tip: The structure and naming of files should allow the reader to get initial understanding
   of what your application does.
   
   Your overall structure of code should be:
-
+```
   <my application>
   	<main application file>
   		<other files, reflecting the logical structure of the application>
   			<within a file, a header comment describing what the file contains>
   				<lits of functions. for each function, a header comment describing what the funciton does>
   					<commented code for each function>
+```
+Tip: Outline your file and class/function structure at a piece of paper before beginning. This will set you on the right direction wrt how to structure your solution top-down.
 
-	Tip: Outline your file and class/function structure at a piece of paper before beginning. This will set you on the right direction wrt how to structure your solution top-down.
-
-* Be consistent and balanced in how you mix PHP and HTML. In a function, you could use either echo statements or HTML blocks to output your HTML, but there can be very many echo() statements. In HTML, you can use <?php ?> tags to inject PHP, but there should not be too many such tags. PHP allows you to do pretty much everything so you need to have discipline to maintain readability of code.
+* Be consistent and balanced in how you mix PHP and HTML. In a function, you could use either echo statements or HTML blocks to output your HTML, but there can be very many `echo()` statements. In HTML, you can use `<?php ?>` tags to inject PHP, but there should not be too many such tags. PHP allows you to do pretty much everything so you need to have discipline to maintain readability of code.
 
 * Break out repeating HTML page elements into functions or sub-files.
   Typically, each page of your website will follow the same wireframe with header, navigation, maybe sidebar, content area, footer. Repeateble elements such as header, footer, navigation should be lifted out as reusable functions and/or include files.
@@ -159,7 +161,7 @@ File names
 
 * Think through your file structure up-front. Also, think rhough your file namings up-front.
 Example:
-
+```
 /lib/
 	/classes/
 		ClassSettings.php
@@ -170,11 +172,11 @@ Example:
 		functions_utilities.php
 		functions_math.php
 		functions_booking.php
+```
 
 
 
-
-Safe programming
+Programming safely
 ===
 
 * Whenever you allocate a global resource dynamically, make sure to explicitly release it when it is no longer needed.
